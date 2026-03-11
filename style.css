@@ -1,59 +1,152 @@
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff8f0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
-header {
-  background: #ff7043;
-  color: white;
-  padding: 40px;
-  text-align: center;
+body {
+  background: #fff8e6;
 }
 
-.menu {
-  padding: 30px;
+/* NAVBAR */
+.navbar {
+  background: #ff7b00;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu h2 {
-  text-align: center;
+.navbar .logo {
+  color: #fff;
   font-size: 28px;
-  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #222;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(to right, #ff7b00, #ffb300);
+  color: white;
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.btn {
+  background: white;
+  color: #ff7b00;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* MENU SECTION */
+.menu-section {
+  padding: 50px;
+  text-align: center;
+}
+
+.title {
+  font-size: 34px;
+  color: #ff7b00;
+  margin-bottom: 30px;
 }
 
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 25px;
 }
 
-.item {
-  background: white;
+.card {
+  background: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-.item img {
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
   width: 100%;
   height: 180px;
-  object-fit: cover;
   border-radius: 10px;
+  object-fit: cover;
 }
 
-.item span {
+.card h3 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #444;
+}
+
+.card p {
+  color: #777;
+  font-size: 14px;
+}
+
+.card span {
   display: block;
   margin-top: 10px;
+  font-size: 20px;
   font-weight: bold;
-  color: #ff7043;
-  font-size: 18px;
+  color: #ff7b00;
 }
 
-footer {
+/* ABOUT SECTION */
+.about-section {
+  background: #fff0d6;
+  padding: 40px;
   text-align: center;
-  padding: 20px;
-  background: #333;
-  color: #fff;
   margin-top: 40px;
+}
+
+/* CONTACT */
+.contact-section {
+  padding: 40px;
+  text-align: center;
+  background: #ffe1ba;
+}
+
+/* FOOTER */
+footer {
+  background: #ff7b00;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
 }

@@ -3,70 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delicious Bite - Restaurant</title>
+  <title>TasteZone Restaurant</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Delicious Bite</h1>
-    <p>Your favorite place to enjoy tasty food</p>
-  </header>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h1 class="logo">TasteZone</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <section class="menu">
-    <h2>Our Menu</h2>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Welcome to TasteZone</h2>
+    <p>Fresh, Delicious & Fast Food made with Love ❤️</p>
+    <a href="#menu" class="btn">Explore Menu</a>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="menu-section">
+    <h2 class="title">Our Special Menu</h2>
 
     <div class="menu-grid">
 
-      <div class="item">
-        <img src="https://i.imgur.com/4Z8R2fU.jpeg" alt="Margherita Pizza" />
-        <h3>Margherita Pizza</h3>
-        <p>Fresh mozzarella, basil & olive oil</p>
+      <div class="card">
+        <img src="https://i.imgur.com/4Z8R2fU.jpeg" alt="Pizza">
+        <h3>Cheese Pizza</h3>
+        <p>Loaded with extra cheese and Italian herbs.</p>
         <span>₹299</span>
       </div>
 
-      <div class="item">
-        <img src="https://i.imgur.com/m3LybOx.jpeg" alt="Veg Burger" />
-        <h3>Veg Burger</h3>
-        <p>Crispy veg patty with fries</p>
+      <div class="card">
+        <img src="https://i.imgur.com/m3LybOx.jpeg" alt="Burger">
+        <h3>Veg Supreme Burger</h3>
+        <p>Crispy patty with spicy sauce and fries.</p>
         <span>₹199</span>
       </div>
 
-      <div class="item">
-        <img src="https://i.imgur.com/SbLeS0R.jpeg" alt="Pasta Alfredo" />
-        <h3>Pasta Alfredo</h3>
-        <p>Creamy white sauce pasta</p>
-        <span>₹249</span>
-      </div>
-
-      <div class="item">
-        <img src="https://i.imgur.com/lkZkq6W.jpeg" alt="French Fries" />
-        <h3>French Fries</h3>
-        <p>Golden crispy salted fries</p>
+      <div class="card">
+        <img src="https://i.imgur.com/2req1f1.jpeg" alt="Noodles">
+        <h3>Veg Hakka Noodles</h3>
+        <p>Chinese-style spicy & tasty noodles.</p>
         <span>₹149</span>
       </div>
 
-      <div class="item">
-        <img src="https://i.imgur.com/Y8mHh7C.jpeg" alt="Cold Coffee" />
-        <h3>Cold Coffee</h3>
-        <p>Refreshing creamy iced coffee</p>
-        <span>₹129</span>
+      <div class="card">
+        <img src="https://i.imgur.com/HX2ws4y.jpeg" alt="Cake">
+        <h3>Chocolate Lava Cake</h3>
+        <p>Hot chocolate-filled soft cake.</p>
+        <span>₹179</span>
       </div>
 
-      <div class="item">
-        <img src="https://i.imgur.com/HX2ws4y.jpeg" alt="Chocolate Cake" />
-        <h3>Chocolate Cake</h3>
-        <p>Rich dark chocolate layered cake</p>
-        <span>₹179</span>
+      <div class="card">
+        <img src="https://i.imgur.com/lkZkq6W.jpeg" alt="Fries">
+        <h3>French Fries</h3>
+        <p>Golden salted crispy fries.</p>
+        <span>₹99</span>
+      </div>
+
+      <div class="card">
+        <img src="https://i.imgur.com/Y8mHh7C.jpeg" alt="Cold Coffee">
+        <h3>Cold Coffee</h3>
+        <p>Refreshing iced creamy coffee.</p>
+        <span>₹129</span>
       </div>
 
     </div>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <h2 class="title">About Us</h2>
+    <p>
+      TasteZone is your perfect place to enjoy delicious fast food made fresh everyday.
+      We use the best quality ingredients and maintain top hygiene standards.  
+      Join us for a delightful food experience!
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <h2 class="title">Contact Us</h2>
+    <p>📍 Indore, MP</p>
+    <p>📞 +91 9876543210</p>
+    <p>📧 info@tastezone.com</p>
+  </section>
+
   <footer>
-    <p>© 2026 Delicious Bite Restaurant</p>
+    <p>© 2026 TasteZone Restaurant. All Rights Reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>

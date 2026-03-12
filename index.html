@@ -4,71 +4,269 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TasteZone Restaurant</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fffaf2;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #ff7b00;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar li {
+      margin-left: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: black;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      height: 450px;
+      background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 5px black;
+    }
+
+    .hero-content {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 12px;
+    }
+
+    .hero-content h2 {
+      font-size: 48px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: white;
+      color: #ff7b00;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Menu Section */
+    .menu-section {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 35px;
+      color: #ff7b00;
+      margin-bottom: 25px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #444;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .card span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #ff7b00;
+    }
+
+    /* Specials */
+    .specials-section {
+      padding: 50px;
+      background: #ffe6c0;
+    }
+
+    .special-card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      gap: 20px;
+      width: 70%;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .special-card img {
+      width: 300px;
+      height: 200px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    /* About */
+    .about-section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* Contact */
+    .contact-section {
+      padding: 40px;
+      background: #ffefd9;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background: #ff7b00;
+      padding: 15px;
+      text-align: center;
+      color: white;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
+  <!-- Navbar -->
   <nav class="navbar">
     <h1 class="logo">TasteZone</h1>
     <ul>
-      <li><a href="#">Home</a></li>
       <li><a href="#menu">Menu</a></li>
+      <li><a href="#specials">Specials</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h2>Welcome to TasteZone</h2>
-    <p>Fresh, Delicious & Fast Food made with Love ❤️</p>
-    <a href="#menu" class="btn">Explore Menu</a>
-  </section>
+  <!-- Hero Banner -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <h2>Delicious Food Delivered Fresh</h2>
+      <p>Your favorite recipes made with love ❤️</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+  </header>
 
-  <!-- MENU SECTION -->
+  <!-- Menu -->
   <section id="menu" class="menu-section">
-    <h2 class="title">Our Special Menu</h2>
-
+    <h2 class="title">Our Menu</h2>
     <div class="menu-grid">
 
       <div class="card">
-        <img src="https://i.imgur.com/4Z8R2fU.jpeg" alt="Pizza">
-        <h3>Cheese Pizza</h3>
-        <p>Loaded with extra cheese and Italian herbs.</p>
+        <img src="https://images.unsplash.com/photo-1601924928408-0f3b39e3d87c?w=800" alt="Pizza">
+        <h3>Cheese Burst Pizza</h3>
+        <p>Cheesy, spicy & loaded with toppings.</p>
         <span>₹299</span>
       </div>
 
       <div class="card">
-        <img src="https://i.imgur.com/m3LybOx.jpeg" alt="Burger">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=800" alt="Burger">
         <h3>Veg Supreme Burger</h3>
-        <p>Crispy patty with spicy sauce and fries.</p>
+        <p>Crispy patty & loaded veggies.</p>
         <span>₹199</span>
       </div>
 
       <div class="card">
-        <img src="https://i.imgur.com/2req1f1.jpeg" alt="Noodles">
+        <img src="https://images.unsplash.com/photo-1585036152077-e5e2a7f3fc55?w=800" alt="Noodles">
         <h3>Veg Hakka Noodles</h3>
-        <p>Chinese-style spicy & tasty noodles.</p>
+        <p>Hot & spicy Indo-Chinese noodles.</p>
         <span>₹149</span>
       </div>
 
       <div class="card">
-        <img src="https://i.imgur.com/HX2ws4y.jpeg" alt="Cake">
-        <h3>Chocolate Lava Cake</h3>
-        <p>Hot chocolate-filled soft cake.</p>
-        <span>₹179</span>
+        <img src="https://images.unsplash.com/photo-1521389508051-d7ffb5dc8e8d?w=800" alt="Pasta">
+        <h3>White Sauce Pasta</h3>
+        <p>Creamy Italian-style pasta.</p>
+        <span>₹249</span>
       </div>
 
       <div class="card">
-        <img src="https://i.imgur.com/lkZkq6W.jpeg" alt="Fries">
-        <h3>French Fries</h3>
-        <p>Golden salted crispy fries.</p>
-        <span>₹99</span>
+        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=800" alt="Momos">
+        <h3>Paneer Momos</h3>
+        <p>Soft steamed momos with spicy chutney.</p>
+        <span>₹129</span>
       </div>
 
       <div class="card">
-        <img src="https://i.imgur.com/Y8mHh7C.jpeg" alt="Cold Coffee">
+        <img src="https://images.unsplash.com/photo-1631515243708-3e95f7b352de?w=800" alt="Biryani">
+        <h3>Veg Dum Biryani</h3>
+        <p>Authentic Hyderabadi flavor.</p>
+        <span>₹199</span>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800" alt="Pancakes">
+        <h3>Chocolate Pancakes</h3>
+        <p>Soft pancakes with chocolate drizzle.</p>
+        <span>₹159</span>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Coffee">
         <h3>Cold Coffee</h3>
         <p>Refreshing iced creamy coffee.</p>
         <span>₹129</span>
@@ -77,17 +275,30 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- Specials -->
+  <section id="specials" class="specials-section">
+    <h2 class="title">Today's Special</h2>
+
+    <div class="special-card">
+      <img src="https://images.unsplash.com/photo-1512058564366-c9e3f78a7c0d?w=800" alt="Special Thali">
+      <div>
+        <h3>TasteZone Special Thali</h3>
+        <p>Roti, dal, paneer, rice, papad & salad — a complete Indian combo meal!</p>
+        <span>₹249</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
   <section id="about" class="about-section">
     <h2 class="title">About Us</h2>
     <p>
-      TasteZone is your perfect place to enjoy delicious fast food made fresh everyday.
-      We use the best quality ingredients and maintain top hygiene standards.  
-      Join us for a delightful food experience!
+      TasteZone brings world flavors to your plate with fresh ingredients, skilled chefs, and unmatched taste.  
+      We believe food should be enjoyable, beautiful, and made with love.
     </p>
   </section>
 
-  <!-- CONTACT -->
+  <!-- Contact -->
   <section id="contact" class="contact-section">
     <h2 class="title">Contact Us</h2>
     <p>📍 Indore, MP</p>
@@ -96,7 +307,7 @@
   </section>
 
   <footer>
-    <p>© 2026 TasteZone Restaurant. All Rights Reserved.</p>
+    <p>© 2026 TasteZone Restaurant</p>
   </footer>
 
 </body>
